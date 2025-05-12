@@ -24,24 +24,53 @@ Run the script. It will:
 
 ## 📈 Regression Output Summary
 
-Call:
-lm(formula = Disease_Progression_Markers ~ Bacterial_Load, data = data)
+regression_model_summary:
+  call: "lm(formula = Disease_Progression_Markers ~ Bacterial_Load, data = data)"
 
-Residuals:
-       1        2        3        4        5        6        7 
--0.17701  0.32153 -0.60558  0.09413  0.51687 -0.01666 -0.13328 
+  residuals:
+    - index: 1
+      residual: -0.17701
+    - index: 2
+      residual: 0.32153
+    - index: 3
+      residual: -0.60558
+    - index: 4
+      residual: 0.09413
+    - index: 5
+      residual: 0.51687
+    - index: 6
+      residual: -0.01666
+    - index: 7
+      residual: -0.13328
 
-Coefficients:
-                 Estimate Std. Error t value Pr(>|t|)   
-(Intercept)      0.188669   0.326386   0.578  0.58828   
-Bacterial_Load   0.029155   0.006807   4.283  0.00784 **
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+  coefficients:
+    - term: "(Intercept)"
+      estimate: 0.188669
+      std_error: 0.326386
+      t_value: 0.578
+      pr_value: 0.58828
+    - term: "Bacterial_Load"
+      estimate: 0.029155
+      std_error: 0.006807
+      t_value: 4.283
+      pr_value: 0.00784
+      significance: "**"
 
-Residual standard error: 0.3989 on 5 degrees of freedom
-Multiple R-squared:  0.7858
-Adjusted R-squared:  0.743 
-F-statistic: 18.35 on 1 and 5 DF,  p-value: 0.00784
+  significance_codes:
+    '***': 0.001
+    '**': 0.01
+    '*': 0.05
+    '.': 0.1
+    ' ': 1
+
+  model_fit_statistics:
+    residual_std_error: 0.3989
+    degrees_of_freedom: 5
+    multiple_r_squared: 0.7858
+    adjusted_r_squared: 0.743
+    f_statistic: 18.35
+    p_value: 0.00784
+
 
 ## 🧠 Interpretation
 Bacterial Load is positively and significantly associated with Disease Progression Markers (p = 0.00784).
