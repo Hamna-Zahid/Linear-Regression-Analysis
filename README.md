@@ -25,14 +25,14 @@ Run the script. It will:
 ## 📈 Regression Output Summary
 
 
--Call:
+Call:
 lm(formula = Disease_Progression_Markers ~ Bacterial_Load, data = data)
 
--Residuals:
+Residuals:
        1        2        3        4        5        6        7 
 -0.17701  0.32153 -0.60558  0.09413  0.51687 -0.01666 -0.13328 
 
--Coefficients:
+Coefficients:
                Estimate Std. Error t value Pr(>|t|)   
 (Intercept)    0.188669   0.326386   0.578  0.58828   
 Bacterial_Load 0.029155   0.006807   4.283  0.00784 **
